@@ -12,10 +12,18 @@ require_once __DIR__ . "/classes/User.php";
 require_once __DIR__ . "/classes/Product.php";
 
 $user = [
-   new User("Roberto", "D'Ambrosio", "Roberto8601@gmail.com", "Premium")
+   new User("Roberto", "D'Ambrosio", "Roberto8601@gmail.com"),
+   new User("Massimo", "D'Ambrosio", "Massimo8601@gmail.com"),
+   new User("Antonio", "D'Ambrosio", "Antonio8601@gmail.com")
 ];
+var_dump($user);
 $product = [
-    new Product("Air Force 1", 20, "Nike")
+    new Product("Air Force 1", 100, "Nike"),
+    new Product("Yeezy Boost", 240, "Adidas"),
+    new Product("Air Force 1: LA", 110, "Nike"),
+    new Product("Stan Smith", 80, "Adidas"),
+    new Product("Chuck Taylor", 60, "Converse"),
+    new Product("Huarache", 140, "Nike")
 ];
-
+var_dump($product)
 ?>

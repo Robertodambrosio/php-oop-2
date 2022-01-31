@@ -1,7 +1,7 @@
 <?php
     class Product {
     public $name;
-    public $price;
+    private $price;
     public $brand;
 
     public function __construct ($_name, $_price, $_brand) {
@@ -10,4 +10,18 @@
         $this->brand = $_brand;
     }
     
+    public function setPrice($_price){
+        $this->price = $_price;
+    }
+    public function getPrice() {
+        return $this->price;
+    }
+    public function getUserPrice($user){
+        if($user->getSconto() > 0) {
+            $sconto = $this->getPrice() * $user->getSconto();
+            return $this-> price - $sconto;
+        } else {
+            return $this->getPrice();
+        }
+    }
     }
